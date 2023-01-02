@@ -1,0 +1,24 @@
+Script started on Fri Dec 30 22:01:01 2022
+Restored session: Fri Dec 30 22:00:55 EET 2022
+[1m[7m%[27m[1m[0m                                                                                ]7;file://dsl-olubng11-54f803-127.dhcp.inet.fi/Users/niko/part12/script-answers[0m[27m[24m[J(base) niko@dsl-olubng11-54f803-127 script-answers % [K[?2004hddcd doce ker container run -it ub [Kuuntu bash[?2004l
+[?2004h]0;root@903ad1787af2: /root@903ad1787af2:/# [K]0;root@903ad1787af2: /root@903ad1787af2:/# mkdir /usr/src/app
+[?2004l[?2004h]0;root@903ad1787af2: /root@903ad1787af2:/# touch /usr/sc rc/app/index.js
+[?2004l[?2004h]0;root@903ad1787af2: /root@903ad1787af2:/# [Kls
+[?2004l[0m[01;36mbin[0m   [01;34mdev[0m  [01;34mhome[0m  [01;34mmedia[0m  [01;34mopt[0m   [01;34mroot[0m  [01;36msbin[0m  [01;34msys[0m  [01;34musr[0m
+[01;34mboot[0m  [01;34metc[0m  [01;36mlib[0m   [01;34mmnt[0m    [01;34mproc[0m  [01;34mrun[0m   [01;34msrv[0m   [30;42mtmp[0m  [01;34mvar[0m
+[?2004h]0;root@903ad1787af2: /root@903ad1787af2:/# cd usr
+[?2004l[?2004h]0;root@903ad1787af2: /usrroot@903ad1787af2:/usr# cd src
+[?2004l[?2004h]0;root@903ad1787af2: /usr/srcroot@903ad1787af2:/usr/src# ls
+[?2004l[0m[01;34mapp[0m
+[?2004h]0;root@903ad1787af2: /usr/srcroot@903ad1787af2:/usr/src# cd app
+[?2004l[?2004h]0;root@903ad1787af2: /usr/src/approot@903ad1787af2:/usr/src/app# ls
+[?2004lindex.js
+[?2004h]0;root@903ad1787af2: /usr/src/approot@903ad1787af2:/usr/src/app# c exit
+[?2004lexit
+[1m[7m%[27m[1m[0m                                                                                ]7;file://dsl-olubng11-54f803-127.dhcp.inet.fi/Users/niko/part12/script-answers[0m[27m[24m[J(base) niko@dsl-olubng11-54f803-127 script-answers % [K[?2004heexit[?2004l
+
+Saving session...
+...saving history...truncating history files...
+...completed.
+
+Script done on Fri Dec 30 22:02:10 2022
