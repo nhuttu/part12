@@ -1,0 +1,78 @@
+Script started on Tue Jan  3 13:14:16 2023
+[1m[7m%[27m[1m[0m                                                                                ]7;file://dsl-olubng11-54f81d-139.dhcp.inet.fi/Users/niko/part12/todo-app/todo-backend[0m[27m[24m[J(base) niko@dsl-olubng11-54f81d-139 todo-backend % [K[?2004hgit pushremote set-url origin git@github.com:nhuttu/part12.git[K[A[26Cpush[K[1B[K[A[59Cstatus[10Dcd part12 ..    git pullstatus[10Dcd fullstack[9D..       git pushremote push  commit -m "First 4 exercises"[K[A[51Cadd .[K[1B[K[A[60Cstatusadd . commit -m "First 4 exercises"[K[A[51Cpush[K[1B[K[A[59Cremote push  [8Dcd ..   fullstack[12Dgit status  pull  [8Dcd ..   part12[9Dgit statuspush  remote set-url origin git@github.com:nhuttu/part12.git[K[A[26Cpush[K[1B[K[A[59C[8D        [8Dddocker container ls[?2004l[1BCONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                     NAMES
+526f823eff30   mongo     "docker-entrypoint.s…"   27 seconds ago   Up 26 seconds   0.0.0.0:3456->27017/tcp   todo-backend-mongo-1
+[1m[7m%[27m[1m[0m                                                                                ]7;file://dsl-olubng11-54f81d-139.dhcp.inet.fi/Users/niko/part12/todo-app/todo-backend[0m[27m[24m[J(base) niko@dsl-olubng11-54f81d-139 todo-backend % [K[?2004hddocker container exec -it tod [Koo-backend-mongo-1 bash[?2004l
+root@526f823eff30:/# [Kroot@526f823eff30:/# mongosh -u root -p exampl le
+]0;mongosh mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	63b40e29637e0707bb47d0d5
+Connecting to:		[1m[32mmongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.6.1[0m
+Using MongoDB:		6.0.3
+[1m[33mUsing Mongosh[0m:		1.6.1
+
+For mongosh info see: [1mhttps://docs.mongodb.com/mongodb-shell/[0m
+
+
+To help improve our products, anonymous usage data is collected and sent to MongoDB periodically (https://www.mongodb.com/legal/privacy-policy).
+You can opt-out by running the [1mdisableTelemetry()[0m command.
+
+[1G[0J [1G[1m[33m------[0m
+   [1m[33mThe server generated these startup warnings when booting[0m
+   2023-01-03T11:14:09.746+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2023-01-03T11:14:10.586+00:00: vm.max_map_count is too low
+[1m[33m------[0m
+
+[1m[33m------[0m
+   Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+   metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+   
+   The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+   and anyone you share the URL with. MongoDB may use this information to make product
+   improvements and to suggest MongoDB products and deployment options to you.
+   
+   To enable free monitoring, run the following command: db.enableFreeMonitoring()
+   To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+[1m[33m------[0m
+
+[1G[0Jtest> [7Gshow dbs
+[1madmin[0m         100.00 KiB
+[1mconfig[0m         12.00 KiB
+[1mlocal[0m          40.00 KiB
+[1mthe_database[0m   40.00 KiB
+[1G[0Jtest> [7Guse _[1G[0Jtest> use [11Gthe_daab[1G[0Jtest> use the_daa[18G[1G[0Jtest> use the_da[17Gtabase
+switched to db the_database
+[1G[0Jthe_database> [15Gshow collections
+[1mtodos[0m
+[1G[0Jthe_database> [15Gdb.todos.insertOne({text[33mtext[39m: [32m"[39m[32mI[39m[32mn[39m[32mc[39m[32mr[39m[32me[39m[32ma[39m [1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m"Increa[39m[48G[32me[39m[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m"Increa[39m[48G[32ms[39m[32me[39m [32mt[39m[32mh[39m[32me[39m [32mn[39m[32mu[39m[32mm[39m[32me[39m[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m"Increase the num[39m[58G[32mb[39m[32me[39m[32mr[39m [32mo[39m[32mf[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32ms[39m [32mi[39m[32mn[39m [32mm[39m[32mt[39m[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m"Increase the number of tools in m[39m[75G[32my[39m [32mt[39m[32mo[39m[32mo[39m[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool[39m [1G[32mb[39m[32me[39m[32ml[39m[32mt[39m[32m"[39m, d[36mdo[39mdone[33mdone[39m: fals[33mfalse[39m})
+{
+  acknowledged: [33mtrue[39m,
+  insertedId: ObjectId("63b40e61bf4d596a42c21504")
+}
+[1G[0Jthe_database> [15Gdb.todo.find({}=[1G[0Jthe_database> db.todo.find({}[30G)[4D[1G[0Jthe_database> db.todo.find({}[44m)[49m[27G[4D[1G[0Jthe_database> db.todo.find({})[23G[1D[1C[1D[1G[0Jthe_database> db.todos.find({})[23G[9C
+[
+  {
+    _id: ObjectId("63b40e0008654524da2d6a3a"),
+    text: [32m'Write code'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId("63b40e0008654524da2d6a3b"),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId("63b40e61bf4d596a42c21504"),
+    text: [32m'Increase the number of tools in my toolbelt'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15Gexit[4D[1G[0Jthe_database> .exit[16G[4C
+root@526f823eff30:/# exit
+exit
+[1m[7m%[27m[1m[0m                                                                                ]7;file://dsl-olubng11-54f81d-139.dhcp.inet.fi/Users/niko/part12/todo-app/todo-backend[0m[27m[24m[J(base) niko@dsl-olubng11-54f81d-139 todo-backend % [K[?2004heexit[?2004l
+
+Saving session...
+...copying shared history...
+...saving history...truncating history files...
+...completed.
+Deleting expired sessions...none found.
+
+Script done on Tue Jan  3 13:16:34 2023
